@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roseli Domingues | Cadastro de Paciente</title>
+  <title>Nome | Cadastro de Paciente</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ======================================================
-       TOKENS DE MARCA — paleta extraída do Instagram da Dra.
-       ====================================================== */
+    
     :root {
       --plum:        #5C3547;   /* roxo-ameixa escuro do cabeçalho */
       --plum-mid:    #8E5C6D;   /* médio para textos e ícones */
@@ -27,9 +25,6 @@
       --border:      #EAD8DF;   /* bordas suaves */
     }
 
-    /* ======================================================
-       RESET & BASE
-       ====================================================== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html { font-size: 18px; }
@@ -44,15 +39,11 @@
       flex-direction: column;
     }
 
-    /* ======================================================
-       CABEÇALHO
-       ====================================================== */
     header {
       background: var(--white);
       position: relative;
       padding: 0.85rem 1.5rem 0.9rem;
       text-align: center;
-      /* Faixa colorida no topo — tom do Instagram da Dra. */
       border-top: 4px solid var(--rose);
       border-bottom: 1px solid var(--border);
     }
@@ -64,8 +55,6 @@
       gap: 0.85rem;
     }
 
-    /* Se logo.png estiver na mesma pasta, ela aparece automaticamente.
-       Caso contrário, só o texto é exibido. */
     .logo-img {
       height: 52px;
       width: auto;
@@ -89,9 +78,6 @@
       margin-top: 3px;
     }
 
-    /* ======================================================
-       STEPPER
-       ====================================================== */
     .stepper {
       background: var(--white);
       border-bottom: 1px solid var(--border);
@@ -129,9 +115,6 @@
     .step.active .step-num { background: var(--rose); border-color: var(--rose); color: #fff; }
     .step.done   .step-num { background: #7A9E8A; border-color: #7A9E8A; color: #fff; }
 
-    /* ======================================================
-       ÁREA PRINCIPAL
-       ====================================================== */
     main {
       flex: 1;
       display: flex;
@@ -144,9 +127,6 @@
       max-width: 680px;
     }
 
-    /* ======================================================
-       CARD BASE
-       ====================================================== */
     .card {
       background: var(--white);
       border-radius: 16px;
@@ -156,9 +136,6 @@
       box-shadow: 0 2px 18px rgba(92,53,71,.06);
     }
 
-    /* ======================================================
-       POLÍTICA DE ATENDIMENTO
-       ====================================================== */
     .policy-head {
       background: var(--rose-light);
       padding: 1rem 1.5rem;
@@ -208,9 +185,6 @@
       margin-top: 0.4rem;
     }
 
-    /* ======================================================
-       CHECKBOX DE CONCORDÂNCIA
-       ====================================================== */
     .agree-row {
       background: var(--white);
       border-radius: 12px;
@@ -236,9 +210,6 @@
       cursor: pointer;
     }
 
-    /* ======================================================
-       BOTÕES
-       ====================================================== */
     .actions {
       display: flex;
       justify-content: space-between;
@@ -283,9 +254,6 @@
 
     .btn-ghost:hover { background: var(--rose-light); border-color: var(--rose); }
 
-    /* ======================================================
-       FORMULÁRIO
-       ====================================================== */
     .form-card { padding: 1.75rem; }
 
     .form-row              { margin-bottom: 1.25rem; }
@@ -326,9 +294,6 @@
       line-height: 1.65;
     }
 
-    /* ======================================================
-       TELA DE ENVIO
-       ====================================================== */
     .screen-center {
       display: flex;
       flex-direction: column;
@@ -351,9 +316,6 @@
 
     .screen-center .send-txt { font-size: 0.94rem; color: var(--brown-mid); }
 
-    /* ======================================================
-       TELA DE SUCESSO
-       ====================================================== */
     .success-icon-old-unused {
       width: 84px; height: 84px;
       border-radius: 50%;
@@ -372,9 +334,6 @@
 
     .success-sub { font-size: 0.95rem; color: var(--brown-soft); }
 
-    /* ======================================================
-       RODAPÉ
-       ====================================================== */
     footer {
       background: var(--white);
       border-top: 1px solid var(--border);
@@ -385,9 +344,6 @@
       color: var(--brown-soft);
     }
 
-    /* ======================================================
-       RESPONSIVO — MOBILE
-       ====================================================== */
     @media (max-width: 600px) {
       html { font-size: 17px; }
 
@@ -414,15 +370,9 @@
 </head>
 <body>
 
-  <!-- ============================================================
-       CABEÇALHO
-       ============================================================ -->
   <header>
     <div class="logo-wrap">
-      <!--
-        LOGO: coloque o arquivo "logo.png" na mesma pasta deste HTML.
-        A imagem aparece automaticamente. Se não encontrar, fica só o texto.
-      -->
+      
       <img src="logo.png" alt="Roseli Domingues"
            class="logo-img"
            onerror="this.style.display='none'">
@@ -433,9 +383,6 @@
     </div>
   </header>
 
-  <!-- ============================================================
-       STEPPER
-       ============================================================ -->
   <nav class="stepper" aria-label="Etapas">
     <div class="step active" id="tab1">
       <div class="step-num" id="n1">1</div>
@@ -447,13 +394,9 @@
     </div>
   </nav>
 
-  <!-- ============================================================
-       CONTEÚDO PRINCIPAL
-       ============================================================ -->
   <main>
     <div class="container">
 
-      <!-- ——— PÁGINA 1: POLÍTICA ——— -->
       <div id="pg1">
         <div class="card">
           <div class="policy-head">
@@ -475,14 +418,14 @@
           <div class="policy-item">
             <span class="bullet">·</span>
             <span>O pagamento deve ser realizado via Pix logo em seguida da sessão pela chave:
-              <strong>41999247279</strong></span>
+              <strong>(XX)XXXXX-XXXX</strong></span>
           </div>
 
           <div class="sig-block">
             <p>Agradeço a compreensão e a colaboração de todos para que os atendimentos</p>
             <p>ocorram de forma organizada e respeitosa.</p>
             <p>Grata,</p>
-            <p class="name">Roseli Domingues · CRP 08/42554</p>
+            <p class="name">Nome · CRP XX/XXXXX</p>
           </div>
         </div>
 
@@ -566,7 +509,7 @@
        RODAPÉ
        ============================================================ -->
   <footer>
-    Roseli Domingues &nbsp;·&nbsp; Psicóloga Clínica &nbsp;·&nbsp; CRP 08/42554 &nbsp;·&nbsp; Curitiba, PR
+    Nome &nbsp;·&nbsp; Psicóloga Clínica &nbsp;·&nbsp; CRP XX/XXXXX &nbsp;·&nbsp; Curitiba, PR
   </footer>
 
   <!-- ============================================================
@@ -686,7 +629,6 @@
 
 }
 
-    /* ---- GERAÇÃO DO PDF (apenas base64, sem download) ---- */
     function gerarPDFBase64(d) {
       if (!window.jspdf) return '';
       const { jsPDF } = window.jspdf;
@@ -699,19 +641,18 @@
         line: [220,208,214]
       };
 
-      // ---- Cabeçalho colorido ----
       doc.setFillColor(...C.plum);
       doc.rect(0, 0, 210, 30, 'F');
 
       doc.setFont('helvetica','bold');
       doc.setFontSize(18);
       doc.setTextColor(245,237,232);
-      doc.text('Roseli Domingues', 105, 14, { align:'center' });
+      doc.text('Nome', 105, 14, { align:'center' });
 
       doc.setFont('helvetica','normal');
       doc.setFontSize(9);
       doc.setTextColor(210,190,200);
-      doc.text('Psicóloga Clínica  ·  CRP 08/42554', 105, 22, { align:'center' });
+      doc.text('Psicóloga Clínica  ·  CRP XX/XXXXX', 105, 22, { align:'center' });
 
       // Faixa rosa
       doc.setFillColor(196,137,154);
@@ -791,14 +732,13 @@
       doc.setFont('helvetica','normal');
       doc.setFontSize(9);
       doc.setTextColor(...C.gray);
-      const decl = `O(a) paciente declara ter lido e concordado com a Política de Agendamento e Atendimento da psicóloga Roseli Domingues (CRP 08/42554) em ${d.data_envio}.`;
+      const decl = `O(a) paciente declara ter lido e concordado com a Política de Agendamento e Atendimento da psicóloga Nome (CRP XX/XXXXX) em ${d.data_envio}.`;
       const dl = doc.splitTextToSize(decl, 170);
       doc.text(dl, 20, y);
       y += dl.length * 5 + 16;
 
 
 
-      // Retorna PDF como string base64 (sem abrir/baixar)
       return doc.output('datauristring').split(",")[1];
     }
 
