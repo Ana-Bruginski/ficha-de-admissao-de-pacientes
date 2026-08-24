@@ -22,15 +22,11 @@ if (!$entrada || empty($entrada["dados"]) || empty($entrada["pdf"])) {
 }
 
 $dados     = $entrada["dados"];
-$pdfBase64 = $entrada["pdf"]; // já vem como base64 puro do JS
+$pdfBase64 = $entrada["pdf"]; 
 
-// =====================================================
-//  CONFIGURAÇÃO — vem de config.php (não versionado)
-// =====================================================
 $brevo_api_key      = $config['brevo_api_key'];
-$remetente_email    = $config['remetente_email']; // e-mail que você verificou no Brevo
+$remetente_email    = $config['remetente_email']; 
 $destinatario_email = $config['destinatario_email'];
-// =====================================================
 
 $nome_paciente = $dados["nome"] ?? "Paciente";
 
@@ -62,7 +58,7 @@ $html_body = "
 
 $payload = [
     "sender" => [
-        "name"  => "Cadastro de Pacientes — Roseli Domingues",
+        "name"  => "Cadastro de Pacientes — Nome",
         "email" => $remetente_email
     ],
     "to" => [
@@ -72,13 +68,12 @@ $payload = [
     "htmlContent" => $html_body,
     "attachment"  => [
         [
-            "content" => $pdfBase64,  // base64 puro, direto do JS
+            "content" => $pdfBase64,  
             "name"    => "Ficha_" . preg_replace('/[^a-zA-Z0-9_\-]/', '_', $nome_paciente) . ".pdf"
         ]
     ]
 ];
 
-// Chama a API do Brevo via HTTP (sem SMTP — não é bloqueado pelo Hostinger)
 $ch = curl_init("https://api.brevo.com/v3/smtp/email");
 
 curl_setopt_array($ch, [
