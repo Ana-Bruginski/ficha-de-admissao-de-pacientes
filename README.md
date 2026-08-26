@@ -4,6 +4,9 @@ Formulário web de cadastro de pacientes para uma Psicóloga independente, com
 geração de PDF no navegador e envio automático por e-mail. Sistema em uso
 real.
 
+<img alt="image" src="https://github.com/user-attachments/assets/e31f1cf8-8fbe-4aff-a295-4f6f9aaa0d5f" />
+
+
 ## Como funciona
 
 1. `index.html` — formulário em etapas (stepper) com a identidade visual da
